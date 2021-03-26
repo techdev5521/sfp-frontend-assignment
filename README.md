@@ -10,7 +10,12 @@ This repo was ~~forked from~~ inspired by https://gitlab.sfp.cc/sfp/sfp-frontend
 git clone https://github.com/techdev5521/sfp-frontend-assesment.git
 ```
 
-**2. Run the development server:**
+**2. Install dependencies:**
+```bash
+npm install
+```
+
+**3. Run the development server:**
 ```bash
 npm run start
 ```
