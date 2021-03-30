@@ -30,7 +30,7 @@ export default function Navbar({logo, links}){
 		);
 
 	return (
-		<div className="Navbar">
+		<div className="Navbar" style={{ backgroundColor: menuOpen ? "rgba(0, 0, 0, 1)" : null }}>
 			<nav className="container">
 				<ul className="row">
 					<li key="logo" id="logo"><img src={logo} alt="Site logo" /></li>
