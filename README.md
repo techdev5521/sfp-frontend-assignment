@@ -2,6 +2,8 @@
 
 This repo was ~~forked from~~ inspired by https://gitlab.sfp.cc/sfp/sfp-frontend-assessment and serves only for review purposes.
 
+**Note:** This is incomplete. A working navigation bar and hero section has been implemented but the movie gallery, API call and pagination are all incomplete.
+
 ### Next Steps
 If I were to better this project, I would want to do the following:
 
