@@ -3,6 +3,10 @@
 	font-family: "Lato";
 	font-weight: 300;
 	color: white;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
 }
 
 .Navbar ul {
