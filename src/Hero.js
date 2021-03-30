@@ -3,14 +3,14 @@ import PropTypes from "prop-types";
 import "./Hero.css";
 import heroImage from "./images/hero.png";
 
-export default function Hero(){
+export default function Hero({ genre }){
     return (
         <div className="Hero">
             <header className="container-fluid">
                 <div className="container">
                     <section className="row">
                         <div className="col-12">
-                            <h1>SECTION</h1>
+                            <h1>{genre}</h1>
                         </div>
                         <div className="col-12">
                             <button>View List</button>
@@ -23,9 +23,10 @@ export default function Hero(){
 }
 
 Hero.propTypes = {
-
+    /** Genre being displayed. */
+    "genre": PropTypes.string
 };
 
 Hero.defaultProps = {
-
+    "genre": ""
 };

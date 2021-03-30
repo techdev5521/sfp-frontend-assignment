@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 import "./Navbar.css";
 
-export default function Navbar({logo, links}){
-	const [active, setActive] = useState(null);
+export default function Navbar({logo, links, activeGenre, setActiveGenre}){
 	const [menuOpen, setMenuOpen] = useState(false);
 
 	const OpenMenuButton = _ => <span>&#9776;</span>;
@@ -15,10 +14,10 @@ export default function Navbar({logo, links}){
 				<li key={item.title} className={`item col-12 col-md-1 ${menuOpen ? "visible" : null}`}>
 					<a 
 						href={item.href}
-						className={item.title === active ? "active" : null}
+						className={item.title === activeGenre ? "active" : null}
 						onClick={ (event) => {
 							event.preventDefault();
-							setActive(item.title)
+							setActiveGenre(item.title)
 						} }
 					>
 						{item.title}
@@ -48,7 +47,11 @@ Navbar.propTypes = {
 	/** The site logo. */
 	"logo": PropTypes.node,
 	/** Array of objects for links. Objects have keys of "title" and "href". */
-	"links": PropTypes.arrayOf(PropTypes.object)
+	"links": PropTypes.arrayOf(PropTypes.object),
+	/** The active genere. */
+	"activeGenre": PropTypes.string.isRequired,
+	/** Function to set active genre. */
+	"setActiveGenre": PropTypes.func.isRequired
 }
 
 Navbar.defaultProps = {
