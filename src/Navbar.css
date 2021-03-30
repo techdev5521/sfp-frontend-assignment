@@ -2,6 +2,7 @@
 	background-color: rgba(0, 0, 0, .5);
 	font-family: "Lato";
 	font-weight: 300;
+	color: white;
 }
 
 .Navbar ul {
@@ -10,14 +11,28 @@
 	align-items: center;
 }
 
-.Navbar ul li:nth-child(1) {
+/* Force logo to fill extra space */
+.Navbar #logo {
 	flex-grow: 2;
 	margin: 1rem 0;
 }
 
+.Navbar #menuButton {
+	font-size: 4rem;
+	padding-right: 3rem;
+}
+
+.Navbar .item {
+	display: none;
+}
+
+.Navbar .visible {
+	display: block;
+}
+
 .Navbar a {
+	color: inherit;
 	font-size: 16px;
-	color: white;
 	text-decoration: none;
 	padding: 1rem;
 	display: block;
@@ -25,4 +40,14 @@
 
 .Navbar .active {
 	font-weight: 900;
+}
+
+@media only screen and (min-width: 768px){
+	.Navbar #menuButton {
+		display: none;
+	}
+
+	.Navbar .item {
+		display: block;
+	}
 }

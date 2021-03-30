@@ -4,12 +4,15 @@ import "./Navbar.css";
 
 export default function Navbar({logo, links}){
 	const [active, setActive] = useState(null);
+	const [menuOpen, setMenuOpen] = useState(false);
 
+	const OpenMenuButton = _ => <span>&#9776;</span>;
+	const CloseMenuButton = _ => <span>&#120299;</span>
 
 	const navItems = links.length > 0
 		? (
 			links.map( item => (
-				<li key={item.title}>
+				<li key={item.title} className={`item col-12 col-md-1 ${menuOpen ? "visible" : null}`}>
 					<a 
 						href={item.href}
 						className={item.title === active ? "active" : null}
@@ -30,7 +33,10 @@ export default function Navbar({logo, links}){
 		<div className="Navbar">
 			<nav className="container">
 				<ul className="row">
-					<li key="logo"><img src={logo} alt="Site logo" /></li>
+					<li key="logo" id="logo"><img src={logo} alt="Site logo" /></li>
+					<li key="menuButton" id="menuButton" onClick={ _ => setMenuOpen(!menuOpen) }>
+						{ menuOpen ? <CloseMenuButton /> : <OpenMenuButton /> }
+					</li>
 					{navItems}
 				</ul>
 			</nav>
