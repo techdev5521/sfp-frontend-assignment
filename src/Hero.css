@@ -1,0 +1,41 @@
+.Hero {
+    height: 100vh;
+    color: white;
+}
+
+.Hero header {
+    background-image: url("images/hero.png");
+    background-size: cover;
+    height: 100%;
+}
+
+.Hero section {
+    flex-direction: row;
+    align-content: flex-end;
+    height: 100vh;
+    padding: 0 0 3rem 3rem;
+}
+
+.Hero h1 {
+    font-size: 72px;
+    font-weight: 300;
+    margin: 1.5rem 0;
+}
+
+.Hero button {
+    border: 0;
+    background-color: white;
+    padding: 1rem;
+    font-size: 18px;
+}
+
+.Hero section > div {
+    display: flex;
+    justify-content: center;
+}
+
+@media only screen and (min-width: 768px) {
+    .Hero section > div {
+        justify-content: flex-start;
+    }
+}
