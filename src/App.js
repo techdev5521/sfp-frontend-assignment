@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import Navbar from "./Navbar";
+import Hero from "./Hero";
 
 const navItems = [
   { "title": "Action", "href": "" },
@@ -16,6 +17,7 @@ function App() {
     <div className="App">
       <div className="container-fluid">
         <Navbar logo={logo} links={navItems} />
+        <Hero />
       </div>
     </div>
   );
