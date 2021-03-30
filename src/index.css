@@ -3,12 +3,13 @@
 
 
 /* Global Corrections */
-* { box-sizing: border-box;}
-html { text-size-adjust: 100% }
-
-body {
-	margin: 0;
+* { 
+	box-sizing: border-box;
+	font-family: "Lato";
 }
+
+html { text-size-adjust: 100% }
+body { margin: 0; }
 
 
 
