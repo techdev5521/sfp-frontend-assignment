@@ -6,6 +6,7 @@ This repo was ~~forked from~~ inspired by https://gitlab.sfp.cc/sfp/sfp-frontend
 If I were to better this project, I would want to do the following:
 
 - Implement a CSS preprocessor and automate grid creation
+- Implement CSS within JSS for logical controls
 
 ### Usage
 **1. Clone this repo:**
